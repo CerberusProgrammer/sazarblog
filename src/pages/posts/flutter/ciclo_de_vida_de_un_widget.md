@@ -1,7 +1,7 @@
 ---
 layout: "../../../layouts/LayoutBlog.astro"
 title: Profundizando en el funcionamiento interno de los widgets en Flutter
-date: 12/25/2028
+date: 12/25/2023
 description: Un análisis técnico y detallado de cómo funcionan internamente los widgets en Flutter.
 image: https://th.bing.com/th/id/OIG.sb2xj0bIQOoaP1OldD2H?w=1024&h=1024&rs=1&pid=ImgDetMain
 tags: ['Flutter', 'Widgets', 'Internals']

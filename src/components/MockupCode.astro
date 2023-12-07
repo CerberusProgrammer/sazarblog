@@ -1,0 +1,17 @@
+---
+interface Props {
+    code: string;
+}
+
+const { code } = Astro.props as Props;
+---
+
+<div class="mockup-code">
+    {
+        code.split("\n").map((line, index) => (
+            <pre data-prefix={index + 1}>
+                <code>{line}</code>
+            </pre>
+        ))
+    }
+</div>

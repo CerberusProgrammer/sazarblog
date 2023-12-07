@@ -1,7 +1,7 @@
 ---
 layout: "../../../layouts/LayoutBlog.astro"
 title: Stateless vs Stateful Widgets
-date: 12/23/2028
+date: 12/23/2023
 description: Una explicación detallada de la diferencia entre los widgets Stateless y Stateful en Flutter.
 image: https://th.bing.com/th/id/OIG.9EXlhkqZJTaKX.AZp2Ll?w=1024&h=1024&rs=1&pid=ImgDetMain
 tags: ['Flutter', 'Widgets']
@@ -36,27 +36,28 @@ Un `StatelessWidget` en Flutter es un widget que describe parte de la interfaz d
 
 Un StatefulWidget, por otro lado, es mutable. Un StatefulWidget puede cambiar su apariencia y estado durante su vida útil. Puede redibujarse en la pantalla con cambios en los datos. Ejemplos de widgets con estado son Checkbox, Radio, Slider, InkWell, Form y TextField.
 
+
 <br>
-
-```dart
-class MyStatefulWidget extends StatefulWidget {
-  @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
-}
-
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  bool _isChecked = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return Checkbox(
-      value: _isChecked,
-      onChanged: (bool value) {
-        setState(() {
-          _isChecked = value;
-        });
-      },
-    );
-  }
-}
-```
+<div class="mockup-code">
+  <pre data-prefix="1"><code>class MyStatefulWidget extends StatefulWidget {</code></pre>
+  <pre data-prefix="2"><code>  @override</code></pre>
+  <pre data-prefix="3"><code>  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();</code></pre>
+  <pre data-prefix="4"><code>}</code></pre>
+  <pre data-prefix="5"><code></code></pre>
+  <pre data-prefix="6"><code>class _MyStatefulWidgetState extends State<MyStatefulWidget> {</code></pre>
+  <pre data-prefix="7"><code>  bool _isChecked = false;</code></pre>
+  <pre data-prefix="8"><code></code></pre>
+  <pre data-prefix="9"><code>  @override</code></pre>
+  <pre data-prefix="10"><code>  Widget build(BuildContext context) {</code></pre>
+  <pre data-prefix="11"><code>    return Checkbox(</code></pre>
+  <pre data-prefix="12"><code>      value: _isChecked,</code></pre>
+  <pre data-prefix="13"><code>      onChanged: (bool value) {</code></pre>
+  <pre data-prefix="14"><code>        setState(() {</code></pre>
+  <pre data-prefix="15"><code>          _isChecked = value;</code></pre>
+  <pre data-prefix="16"><code>        });</code></pre>
+  <pre data-prefix="17"><code>      },</code></pre>
+  <pre data-prefix="18"><code>    );</code></pre>
+  <pre data-prefix="19"><code>  }</code></pre>
+  <pre data-prefix="20"><code>}</code></pre>
+</div>
+<br>

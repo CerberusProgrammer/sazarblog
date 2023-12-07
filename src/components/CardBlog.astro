@@ -7,11 +7,11 @@ interface Props {
 const { post } = Astro.props as Props;
 ---
 
-<a href={post.url} class="flex justify-center">
+<a href={post.url} class="flex justify-center pt-4 pb-4">
     <div
-        class="card w-96 bg-base-100 shadow-xl hover:scale-105 transition-transform duration-200 m-auto"
+        class="card w-full sm:w-96 bg-base-100 shadow-xl hover:scale-105 transition-transform duration-200 m-0"
     >
-        <figure><img src={post.frontmatter.image} alt="Shoes" /></figure>
+        <figure><img src={post.frontmatter.image} /></figure>
         <div class="card-body">
             <div class="card-actions justify-end">
                 {

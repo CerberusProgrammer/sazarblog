@@ -20,14 +20,12 @@ const { frontmatter } = Astro.props;
                 title={frontmatter.title}
                 subtitle={frontmatter.description}
             />
-            <div
-                class="prose lg:prose-xl mt-12 text-green-400 text-lg font-mono"
-            >
+            <div class="prose lg:prose-xl mt-12 text-lg font-mono">
                 <div class="mt-4 space-x-2">
                     {
                         frontmatter.tags &&
                             frontmatter.tags.map((tag: string) => (
-                                <span class="inline-block outline outline-green-800 rounded-full px-3 py-1 text-sm font-semibold text-green-100 mr-2 mb-2">
+                                <span class="inline-block outline rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">
                                     {tag}
                                 </span>
                             ))
@@ -41,17 +39,6 @@ const { frontmatter } = Astro.props;
 </html>
 
 <style is:global>
-    :root {
-        --accent: 136, 58, 234;
-        --accent-light: 224, 204, 250;
-        --accent-dark: 49, 10, 101;
-        --accent-gradient: linear-gradient(
-            45deg,
-            rgb(var(--accent)),
-            rgb(var(--accent-light)) 30%,
-            white 60%
-        );
-    }
     html {
         font-family: monospace;
         font-size: 18px;
@@ -62,22 +49,19 @@ const { frontmatter } = Astro.props;
         margin: 2em;
         line-height: 1.6;
     }
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 20px;
+    }
     img {
         border-radius: 18px;
     }
     code {
         font-family: monospace;
-    }
-    h1 {
-        font-size: 2em;
-        color: #00ff00;
-    }
-    h2 {
-        font-size: 1.5em;
-        color: #00ff00;
-    }
-    h3 {
-        font-size: 1.17em;
-        color: #00ff00;
     }
 </style>

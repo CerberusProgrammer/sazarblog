@@ -1,7 +1,7 @@
 ---
 layout: "../../../layouts/LayoutBlog.astro"
 title: ¿Por qué Flutter utiliza Dart? Un análisis más profundo
-date: 12/27/2028
+date: 12/27/2023
 description: Un análisis técnico y detallado de por qué Flutter eligió Dart como su lenguaje de programación.
 image: https://th.bing.com/th/id/OIG.Dxtu5IJR3CcvFJz_kx_g?w=1024&h=1024&rs=1&pid=ImgDetMain
 tags: ['Flutter', 'Dart', 'Programming']
