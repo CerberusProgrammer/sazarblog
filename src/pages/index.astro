@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 let allPost = await Astro.glob("./posts/*/*.md");
 
 allPost = allPost.sort(
-	(fecha1, fecha2) =>
+	(fecha2, fecha1) =>
 		new Date(fecha2.frontmatter.date).valueOf() -
 		new Date(fecha1.frontmatter.date).valueOf(),
 );
