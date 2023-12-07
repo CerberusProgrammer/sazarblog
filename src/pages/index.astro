@@ -1,16 +1,20 @@
 ---
+import CardBlog from "../components/CardBlog.astro";
+import Title from "../components/Title.astro";
+import Layout from "../layouts/Layout.astro";
 
+let allPost = await Astro.glob("./posts/*/*.md");
+
+allPost = allPost.sort(
+	(fecha1, fecha2) =>
+		new Date(fecha2.frontmatter.date).valueOf() -
+		new Date(fecha1.frontmatter.date).valueOf(),
+);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="SazarCode's Blog">
+	<Title title="" subtitle="" />
+	<div class="container mx-auto space-y-12">
+		{allPost.map((p) => <CardBlog post={p} />)}
+	</div>
+</Layout>

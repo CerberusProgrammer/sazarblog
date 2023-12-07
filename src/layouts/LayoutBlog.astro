@@ -1,0 +1,83 @@
+---
+import Nav from "../components/Nav.astro";
+import Title from "../components/Title.astro";
+import Footer from "./Footer.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{frontmatter.title}</title>
+    </head>
+    <body>
+        <Nav />
+        <div class="container mx-auto px-4 py-8 max-w-3xl">
+            <Title
+                title={frontmatter.title}
+                subtitle={frontmatter.description}
+            />
+            <div
+                class="prose lg:prose-xl mt-12 text-green-400 text-lg font-mono"
+            >
+                <div class="mt-4 space-x-2">
+                    {
+                        frontmatter.tags &&
+                            frontmatter.tags.map((tag: string) => (
+                                <span class="inline-block outline outline-green-800 rounded-full px-3 py-1 text-sm font-semibold text-green-100 mr-2 mb-2">
+                                    {tag}
+                                </span>
+                            ))
+                    }
+                </div>
+                <slot />
+            </div>
+        </div>
+        <Footer />
+    </body>
+</html>
+
+<style is:global>
+    :root {
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+        --accent-gradient: linear-gradient(
+            45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 30%,
+            white 60%
+        );
+    }
+    html {
+        font-family: monospace;
+        font-size: 18px;
+        background: #000000;
+        background-size: 224px;
+    }
+    body {
+        margin: 2em;
+        line-height: 1.6;
+    }
+    img {
+        border-radius: 18px;
+    }
+    code {
+        font-family: monospace;
+    }
+    h1 {
+        font-size: 2em;
+        color: #00ff00;
+    }
+    h2 {
+        font-size: 1.5em;
+        color: #00ff00;
+    }
+    h3 {
+        font-size: 1.17em;
+        color: #00ff00;
+    }
+</style>

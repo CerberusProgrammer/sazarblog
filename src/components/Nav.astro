@@ -1,0 +1,23 @@
+<div class="navbar bg-base-100">
+    <div class="flex-1">
+        <a class="btn text-xl" href="/"
+            >Sazarblog<p class="animate-blink">_</p></a
+        >
+    </div>
+</div>
+
+<style>
+    @keyframes blink {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .animate-blink {
+        animation: blink 1s steps(5, start) infinite;
+    }
+</style>

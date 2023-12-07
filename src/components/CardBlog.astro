@@ -1,0 +1,30 @@
+---
+import type { MarkdownInstance } from "astro";
+interface Props {
+    post: MarkdownInstance<Record<string, any>>;
+}
+
+const { post } = Astro.props as Props;
+---
+
+<a href={post.url} class="flex justify-center">
+    <div
+        class="card w-96 bg-base-100 shadow-xl hover:scale-105 transition-transform duration-200 m-auto"
+    >
+        <figure><img src={post.frontmatter.image} alt="Shoes" /></figure>
+        <div class="card-body">
+            <div class="card-actions justify-end">
+                {
+                    post.frontmatter.tags &&
+                        post.frontmatter.tags.map((tag: string) => (
+                            <div class="badge badge-outline">{tag}</div>
+                        ))
+                }
+            </div>
+            <h2 class="card-title">
+                {post.frontmatter.title}
+            </h2>
+            <p>{post.frontmatter.description}</p>
+        </div>
+    </div>
+</a>
