@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/LayoutBlog.astro"
+layout: "../../../layouts/LayoutBlog.astro"
 title: Profundizando en el funcionamiento interno de los widgets en Flutter
 date: 12/25/2028
 description: Un análisis técnico y detallado de cómo funcionan internamente los widgets en Flutter.

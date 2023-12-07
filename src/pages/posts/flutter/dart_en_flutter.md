@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/LayoutBlog.astro"
+layout: "../../../layouts/LayoutBlog.astro"
 title: ¿Por qué Flutter utiliza Dart? Un análisis más profundo
 date: 12/27/2028
 description: Un análisis técnico y detallado de por qué Flutter eligió Dart como su lenguaje de programación.

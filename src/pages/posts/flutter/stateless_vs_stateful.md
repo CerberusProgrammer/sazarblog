@@ -1,5 +1,5 @@
 ---
-layout: "@layouts/LayoutBlog.astro"
+layout: "../../../layouts/LayoutBlog.astro"
 title: Stateless vs Stateful Widgets
 date: 12/23/2028
 description: Una explicación detallada de la diferencia entre los widgets Stateless y Stateful en Flutter.
