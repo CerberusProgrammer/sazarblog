@@ -17,14 +17,14 @@ const { post } = Astro.props as Props;
                 {
                     post.frontmatter.tags &&
                         post.frontmatter.tags.map((tag: string) => (
-                            <div class="badge badge-outline">{tag}</div>
+                            <div class="badge badge-outline text-accent">{tag}</div>
                         ))
                 }
             </div>
             <h2 class="card-title text-primary">
                 {post.frontmatter.title}
             </h2>
-            <p>{post.frontmatter.description}</p>
+            <p class="text-secondary">{post.frontmatter.description}</p>
         </div>
     </div>
 </a>
