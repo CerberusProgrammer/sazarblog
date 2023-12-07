@@ -1,7 +1,7 @@
 ---
 layout: "../../../layouts/LayoutBlog.astro"
 title: El código limpio no hace feliz a tus jefes.
-date: 12/7/2023
+date: 7/12/2023
 description: Hablemos sobre el "Clean Code" y como este patron de diseño esta arruinando el progreso que entregas a tu jefe de departamento o cliente.
 image: https://uynguyen.github.io/Post-Resources/CleanCode/CleanCode.jpg
 tags: ['Programacion', 'Personal', 'Codigo Limpio']

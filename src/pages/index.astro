@@ -5,11 +5,16 @@ import Layout from "../layouts/Layout.astro";
 
 let allPost = await Astro.glob("./posts/*/*.md");
 
-allPost = allPost.sort(
-	(fecha2, fecha1) =>
-		new Date(fecha2.frontmatter.date).valueOf() -
-		new Date(fecha1.frontmatter.date).valueOf(),
-);
+allPost = allPost.sort((post1, post2) => {
+    const [day1, month1, year1] = post1.frontmatter.date.split("/").map(Number);
+    const [day2, month2, year2] = post2.frontmatter.date.split("/").map(Number);
+
+    const date1 = new Date(year1, month1 - 1, day1);
+    const date2 = new Date(year2, month2 - 1, day2);
+
+    // Orden descendente: las fechas más recientes primero
+    return date2.valueOf() - date1.valueOf();
+});
 ---
 
 <Layout title="SazarCode's Blog">

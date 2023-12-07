@@ -1,7 +1,7 @@
 ---
 layout: "../../../layouts/LayoutBlog.astro"
 title: Stateless vs Stateful Widgets
-date: 12/23/2023
+date: 29/11/2023
 description: Una explicación detallada de la diferencia entre los widgets Stateless y Stateful en Flutter.
 image: https://th.bing.com/th/id/OIG.9EXlhkqZJTaKX.AZp2Ll?w=1024&h=1024&rs=1&pid=ImgDetMain
 tags: ['Flutter', 'Widgets']

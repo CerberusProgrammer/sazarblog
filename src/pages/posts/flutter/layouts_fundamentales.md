@@ -1,7 +1,7 @@
 ---
 layout: "../../../layouts/LayoutBlog.astro"
 title: Explorando los Layouts en Flutter
-date: 12/23/2023
+date: 23/11/2023
 description: Una guía detallada de los diferentes layouts que ofrece Flutter y cómo utilizarlos.
 image: https://th.bing.com/th/id/OIG.obHnDzipClqOpsLjg_4E?pid=ImgGn
 tags: ['Flutter', 'Layouts']

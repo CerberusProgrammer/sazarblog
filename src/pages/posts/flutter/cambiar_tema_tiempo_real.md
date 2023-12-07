@@ -1,7 +1,7 @@
 ---
 layout: "../../../layouts/LayoutBlog.astro"
 title: Cambiando el Tema en Tiempo Real en Flutter Usando Provider
-date: 12/23/2023
+date: 23/11/2023
 description: Una guía paso a paso para cambiar el tema en tiempo real en Flutter usando Provider.
 image: https://th.bing.com/th/id/OIG.IrgPEeRXEt6X57DMFY5X?pid=ImgGn
 tags: ['Flutter', 'Provider', 'Temas']
