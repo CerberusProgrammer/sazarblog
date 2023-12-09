@@ -12,7 +12,6 @@ allPost = allPost.sort((post1, post2) => {
     const date1 = new Date(year1, month1 - 1, day1);
     const date2 = new Date(year2, month2 - 1, day2);
 
-    // Orden descendente: las fechas más recientes primero
     return date2.valueOf() - date1.valueOf();
 });
 ---
